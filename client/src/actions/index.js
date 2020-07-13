@@ -1,4 +1,15 @@
-import {SIGN_IN,SIGN_OUT} from './types';
+import axios from 'axios';
+import history from '../history';
+
+import {SIGN_IN,SIGN_OUT,CREATE_FISH} from './types';
+
+export const createFish = (formValues,userId) => async dispatch =>   {
+    const idAppended = {...formValues,"id":userId}
+   const response = await axios.post('/api/createFish',idAppended);
+   dispatch({type:CREATE_FISH,payload: response.data});
+
+   history.push('/view-fish');
+}  
 
 export const signIn = (userId) => {
     return{

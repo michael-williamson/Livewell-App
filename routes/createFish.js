@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const User = mongoose.model('user');
-const Trades = mongoose.model('trades');
+const Fish = mongoose.model('fish');
+
 
 module.exports = app => {
     app.post('/api/createFish', (req, res) => {
