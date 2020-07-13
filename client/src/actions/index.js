@@ -1,7 +1,7 @@
 import axios from 'axios';
 import history from '../history';
 
-import {SIGN_IN,SIGN_OUT,CREATE_FISH} from './types';
+import {SIGN_IN,SIGN_OUT,CREATE_FISH,FETCH_FISH} from './types';
 
 export const createFish = (formValues,userId) => async dispatch =>   {
     const idAppended = {...formValues,"id":userId}
@@ -9,6 +9,13 @@ export const createFish = (formValues,userId) => async dispatch =>   {
    dispatch({type:CREATE_FISH,payload: response.data});
 
    history.push('/view-fish');
+}  
+
+export const fetchFish = (formValues,userId) => async dispatch =>   {
+    const idAppended = {...formValues,"id":userId}
+   const response = await axios.post('/api/fetchFish',idAppended);
+   dispatch({type:FETCH_FISH,payload: response.data});
+
 }  
 
 export const signIn = (userId) => {

@@ -6,6 +6,7 @@ const Fish = mongoose.model('fish');
 module.exports = app => {
     app.post('/api/createFish', (req, res) => {
         const {
+            id,
             species,
             inches,
             pounds,

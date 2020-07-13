@@ -18,11 +18,12 @@ class FishEnterForm extends Component {
     }
 
     onSubmit = (formValues) => {
-      this.props.createTrade(formValues,this.props.id);
+      this.props.createFish(formValues,this.props.id);
   }
 
 
     render() { 
+      console.log(this.props)
         return (
             <div>
                     <form id="fish-info-form" onSubmit={this.props.handleSubmit(this.onSubmit)} >
@@ -53,7 +54,9 @@ class FishEnterForm extends Component {
 
 const mapStateToProps =  (state) => {
   return {
-      formData: state.form
+      formData: state.form,
+      id: state.Auth.userId
+
   }
 } 
 
