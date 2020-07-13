@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {Field,reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom'
 
+import {createFish} from '../actions/index';
+
 class FishEnterForm extends Component {
 
 
@@ -15,11 +17,15 @@ class FishEnterForm extends Component {
       );
     }
 
+    onSubmit = (formValues) => {
+      this.props.createTrade(formValues,this.props.id);
+  }
+
 
     render() { 
         return (
             <div>
-                    <form id="fish-info-form" >
+                    <form id="fish-info-form" onSubmit={this.props.handleSubmit(this.onSubmit)} >
       <label class="species-label" for="species">Species:</label>  
       <Field name="species" id="species" component="select"> 
         <option/>
@@ -37,7 +43,7 @@ class FishEnterForm extends Component {
           <Field name="ounces" component={this.renderSelectInput} iterations="17"/>
       <span> ounces</span>
   
-      <button id="submit-fish" type="button" >Add Fish</button> 
+      <button id="submit-fish" type="submit" >Add Fish</button> 
       <Link to="/options-menu" id="cancel">Cancel</Link> 
     </form>
             </div>
@@ -51,4 +57,4 @@ const mapStateToProps =  (state) => {
   }
 } 
 
-export default reduxForm({form:'enterFishForm'})(FishEnterForm);
+export default connect(mapStateToProps,{createFish})(reduxForm({form:'enterFishForm'})(FishEnterForm));
