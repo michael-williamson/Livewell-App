@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Field,reduxForm} from 'redux-form';
+import {Link} from 'react-router-dom'
 
 class FishEnterForm extends Component {
 
@@ -20,12 +21,13 @@ class FishEnterForm extends Component {
             <div>
                     <form id="fish-info-form" >
       <label class="species-label" for="species">Species:</label>  
-      <select name="species" id="species"> 
-        <option value="Largemouth Bass">Largemouth Bass</option>
+      <Field name="species" id="species" component="select"> 
+        <option/>
+        <option>Largemouth Bass</option>
         <option>Bluegill</option>
         <option>White Perch</option>
         <option>Catfish</option>
-      </select>
+      </Field>
       <label for="length">Length:</label>
        <Field name="inches" component={this.renderSelectInput} iterations="37"/> 
        <span> inches</span>
@@ -36,7 +38,7 @@ class FishEnterForm extends Component {
       <span> ounces</span>
   
       <button id="submit-fish" type="button" >Add Fish</button> 
-      <button type="reset" id="cancel">Cancel</button> 
+      <Link to="/options-menu" id="cancel">Cancel</Link> 
     </form>
             </div>
         );

@@ -5,6 +5,8 @@ import './App.css';
 
 import FishEnter from './components/FishEnter';
 import Landing from './components/Landing';
+import OptionsMenu from './components/OptionsMenu';
+import ViewFish from './components/ViewFish';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
       <header className="">
       <h2>Livewell</h2>
       </header>
-      <Route path="/" component={Landing}/>
-      <Route path="/fish-enter" component={FishEnter}/>
+      <Route exact path="/" component={Landing}/>
+      <Route exact path="/options-menu" component={OptionsMenu}/>
+      <Route exact path="/fish-enter" component={FishEnter}/>
+      <Route exact path="/view-fish" component={ViewFish}/>
     </div>
     </Router>
     </div>

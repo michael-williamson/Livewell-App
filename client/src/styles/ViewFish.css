@@ -1,0 +1,100 @@
+#view-fish-table {
+    display: none; 
+}  
+
+#return-btn {
+    margin: 27px auto 0;
+    display: block;
+    padding: 20px 41px;
+    width: 132px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0px 0px 10px 1px black;
+    background-color: #b9ff00;
+    color: black;
+    font-size: 1.2em;  
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #3ddf48;
+}
+
+#edit-btn {
+    margin: 27px auto 0;  
+    display: block;  
+    padding: 20px 41px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0px 0px 10px 1px black;
+    background-color: blue;
+    color: black;
+    font-size: 1.2em;  
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #3ddf48;
+}
+
+#remove-btn {
+    margin: 27px auto 0;  
+    padding: 20px 41px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0px 0px 10px 1px black;
+    background-color: orange;
+    color: black;
+    font-size: 1.2em;  
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #3ddf48;
+}
+
+#finish-btn {
+    margin: 27px auto 0;  
+    padding: 20px 41px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0px 0px 10px 1px black;
+    background-color: plum;
+    color: black;
+    font-size: 1.2em;  
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #3ddf48;
+}
+
+table {
+    background: black; 
+
+
+}
+
+tr td:first-child{
+    display: none; 
+   }
+
+  
+th {
+    background: #d6ff00;
+    font-size: 19px;
+    color: #0058ff;
+    font-family: sans-serif;
+}
+
+tr.Largemouth.Bass {
+    background: #00ceff;
+    font-size: 22px;
+    text-align: center; 
+}   
+
+tr.White.Perch {
+    background: gray;
+    font-size: 22px;
+    text-align: center; 
+}   
+
+tr.Catfish {
+    background: green;
+    font-size: 22px;
+    text-align: center; 
+}   
+
+tr.Bluegill {
+    background: orange;
+    font-size: 22px;
+    text-align: center; 
+}   

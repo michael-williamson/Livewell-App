@@ -13,3 +13,9 @@ body {
   background-size: cover;
   background-position: 37% 0%;
 }  
+
+#root{
+  background-color: #f0f8ff4f;
+  margin: 0 100px; 
+  height: 100vh; 
+}
