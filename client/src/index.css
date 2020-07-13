@@ -1,0 +1,15 @@
+
+* {
+  box-sizing: border-box; 
+}
+   
+a {
+  text-decoration: none; 
+}
+
+body {
+  background-image: url(./images/live-well-md.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 37% 0%;
+}  
