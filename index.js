@@ -6,9 +6,12 @@ const bodyParser = require('body-parser');
 const app = express(); 
 
 app.use(bodyParser.json());
+require('./models/Fish');
 
 // mongoose.connect(keys.mongoURI);  
 mongoose.connect(keys.devURI,{ useNewUrlParser: true });
+
+require('./routes/createFish')(app);
 
 if(process.env.NODE_ENV === 'production'){
     //express will serve up production assets
