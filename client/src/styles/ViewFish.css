@@ -1,4 +1,9 @@
+.viewFishDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
+}
 
 #return-btn {
     margin: 27px auto 0;

@@ -38,7 +38,7 @@ class ViewFish extends Component {
     render() {
         console.log(this.props)
         return (
-            <div>
+            <div className="viewFishDiv">
                                     <table className="table">
                         <thead>
                         <tr class="header-row">

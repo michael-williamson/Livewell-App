@@ -1,15 +1,17 @@
-main {
+.main {
     width: 100%;
     margin: 14px 0 0 0;
-    border: solid 3px black;
-    background-color: lightyellow;
+    /* border: solid 3px black;
+    background-color: lightyellow; */
     overflow: auto;
     height: 100%;
     position: relative;
-    background-image: url(../images/live-well.jpg);
+    /* background-image: url(../images/live-well.jpg);
     background-repeat: no-repeat;
     background-size:311%;  
-    background-position: 50% 0%;
+    background-position: 50% 0%; */
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -24,6 +26,7 @@ label {
     padding-left: 4px;
     border-radius: 5px;
     display: block;
+    text-align: center;
 }
 select{
     height: 44px;
