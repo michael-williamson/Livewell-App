@@ -8,6 +8,7 @@ import FishEnter from './components/FishEnter';
 import Landing from './components/Landing';
 import OptionsMenu from './components/OptionsMenu';
 import ViewFish from './components/ViewFish';
+import FishDelete from './components/FishDelete';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route exact path="/options-menu" component={OptionsMenu}/>
       <Route exact path="/fish-enter" component={FishEnter}/>
       <Route exact path="/view-fish" component={ViewFish}/>
+      <Route exact path="/fish-delete/:id" component={FishDelete}/>
     </div>
     </Router>
     </div>

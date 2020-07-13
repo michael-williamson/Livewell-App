@@ -14,6 +14,7 @@ mongoose.connect(keys.devURI,{ useNewUrlParser: true });
 
 require('./routes/createFish')(app);
 require('./routes/fetchFish')(app);
+require('./routes/deleteFish')(app);
 
 if(process.env.NODE_ENV === 'production'){
     //express will serve up production assets

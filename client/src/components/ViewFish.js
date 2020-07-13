@@ -16,6 +16,7 @@ class ViewFish extends Component {
         }
     }
 
+
     renderTable = () => {
         if(this.props.fish.length > 0){
             return this.props.fish.map(item => {
@@ -28,7 +29,7 @@ class ViewFish extends Component {
                             <td>{item.pounds ? item.pounds: "0"} lbs. {item.ounces} oz.</td>
                             <td className="btnSpace">
                                 <button id="edit-btn">Edit</button>
-                                <button  id="remove-btn">Delete</button>
+                                <Link  id="remove-btn" to={`/fish-delete/${item._id}`}>Delete</Link>
                             </td>
                         </tr>  
                         </tbody>            
@@ -55,7 +56,7 @@ class ViewFish extends Component {
                 {this.renderTable()}
                 </table>
                 <Link to="/options-menu" id="return-btn">Return</Link>
-                <button  id="finish-btn">Finish</button>               
+                <Link to="/fish-enter" id="finish-btn">Add Fish</Link>               
             </div>
         );
     }
