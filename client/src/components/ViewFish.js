@@ -24,8 +24,12 @@ class ViewFish extends Component {
                         <tbody>
                         <tr>
                             <td>{item.species}</td>
-                            <td>{item.inches}</td>
-                            <td>{item.pounds} {item.ounces}</td>
+                            <td>{item.inches} inches</td>
+                            <td>{item.pounds ? item.pounds: "0"} lbs. {item.ounces} oz.</td>
+                            <td className="btnSpace">
+                                <button id="edit-btn">Edit</button>
+                                <button  id="remove-btn">Delete</button>
+                            </td>
                         </tr>  
                         </tbody>            
                         </Fragment>    
@@ -45,13 +49,12 @@ class ViewFish extends Component {
                             <th>Species</th>
                             <th>Length</th> 
                             <th>Weight</th>
+                            <th></th>
                         </tr>  
                         </thead>
                 {this.renderTable()}
                 </table>
                 <Link to="/options-menu" id="return-btn">Return</Link>
-                <button id="edit-btn">Edit</button>
-                <button  id="remove-btn">Remove</button>
                 <button  id="finish-btn">Finish</button>               
             </div>
         );

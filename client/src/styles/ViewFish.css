@@ -20,31 +20,40 @@
     text-shadow: 1px 1px 3px #3ddf48;
 }
 
+.btnSpace {
+    display: flex;
+    flex-direction: column;
+}
+
 #edit-btn {
-    margin: 27px auto 0;  
+    /* margin: 27px auto 0;   */
     display: block;  
-    padding: 20px 41px;
+    /* padding: 20px 41px; */
     border-radius: 6px;
     border: none;
     box-shadow: inset 0px 0px 10px 1px black;
-    background-color: blue;
+    background-color: #00e7ff;
     color: black;
-    font-size: 1.2em;  
+    /* font-size: 1.2em;   */
     font-weight: bold;
     text-shadow: 1px 1px 3px #3ddf48;
 }
 
 #remove-btn {
-    margin: 27px auto 0;  
-    padding: 20px 41px;
+    margin: 5px 0 0;  
+    /* padding: 20px 41px; */
     border-radius: 6px;
     border: none;
     box-shadow: inset 0px 0px 10px 1px black;
     background-color: orange;
     color: black;
-    font-size: 1.2em;  
+    /* font-size: 1.2em;   */
     font-weight: bold;
     text-shadow: 1px 1px 3px #3ddf48;
+}
+
+#edit-btn, #remove-btn{
+    font-size: 30px;
 }
 
 #finish-btn {
@@ -60,13 +69,30 @@
     text-shadow: 1px 1px 3px #3ddf48;
 }
 
+table {
+    background: blue;
+    text-align: center;
+}
+
+td{
+    font-family: 'Modak', cursive;
+    font-size: 40px;
+    height: 80px;
+    line-height: 40px;
+}
+
+tr {
+    background-color: beige;
+}
 
   
 th {
     background: #d6ff00;
-    font-size: 19px;
+    font-size: 29px;
+    height: 30px;
     color: #0058ff;
     font-family: sans-serif;
+    padding: 20px; 
 }
 
 tr.Largemouth.Bass {
