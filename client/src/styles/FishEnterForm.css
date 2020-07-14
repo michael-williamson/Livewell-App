@@ -1,5 +1,6 @@
 .fish-info-form{
     text-align: center;
+    width: 100%; 
 }
 
 label {
@@ -21,6 +22,14 @@ select{
     border: none;
     border-radius: 2px;
     margin-left: 1px;
+    margin-bottom: 13px; 
+  }
+
+  .selectSpan {
+    color: red;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
   }
 
 span {
@@ -47,8 +56,13 @@ span {
     font-size: 1.2em;
     font-weight: bold;
     text-shadow: 1px 1px 3px #3ddf48;
-
+    position: relative;
   }
+
+  #submit-fish:disabled{
+    background-color: #b9ff0000;
+  }
+
   #cancel{
     margin: 16px auto 0;
     display: block;
@@ -64,3 +78,22 @@ span {
     font-weight: bold;
     width: 119px;
     height: 56px;   }
+
+    /* styling to show and hide text according to disabled button */
+
+    .hide{
+        display: none;
+    }
+
+    .hideForGood {
+        display: none;
+    }
+
+    #submit-fish:hover + .hide {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -87px;
+        width: 97px;
+        padding: 10px;
+    }
