@@ -1,0 +1,57 @@
+.App{
+    height: 100%;
+    position: relative;
+}
+
+.catfish{
+    position: absolute;
+    width: 141px;
+    height: 100px;
+    border-radius: 50%;
+    top: 50%; 
+    left: 5px; 
+}
+
+.bass {
+    position: absolute;
+    width: 141px;
+    height: 100px;
+    border-radius: 50%;
+    top: 10%;
+    right: 5px; 
+}
+
+.pond {
+    position: absolute;
+    width: 141px;
+    height: 100px; 
+    border-radius: 50%;
+    top: 10%;
+    left: 5px; 
+}
+.catfish2{
+    position: absolute;
+    width: 90px;
+    height: 64px;
+    border-radius: 50%;
+    bottom: 61%;
+    right: 7%;
+}
+
+.bass2{
+    position: absolute;
+    width: 90px;
+    height: 64px;
+    border-radius: 50%;
+    bottom: 61%;
+    left: 7%;
+}
+
+.pond2 {
+    position: absolute;
+    width: 141px;
+    height: 100px; 
+    border-radius: 50%;
+    top: 50%;
+    right: 5px; 
+}

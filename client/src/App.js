@@ -10,12 +10,22 @@ import OptionsMenu from './components/OptionsMenu';
 import ViewFish from './components/ViewFish';
 import FishDelete from './components/FishDelete';
 
+import catfish from './images/catfish.jpg';
+import bass from './images/bass.jpg';
+import pond from './images/pond.jpg';
+
 function App() {
   return (
-    <div>
+    <div className="App">
+      <img src={catfish} className="catfish"/>
+      <img src={bass} className="bass"/>
+      <img src={pond} className="pond"/>
+      <img src={catfish} className="catfish2"/>
+      <img src={bass} className="bass2"/>
+      <img src={pond} className="pond2"/>
     <Router history={history}>
       <Header/>
-    <div className="">
+    <div>
       <Route exact path="/" component={Landing}/>
       <Route exact path="/options-menu" component={OptionsMenu}/>
       <Route exact path="/fish-enter" component={FishEnter}/>
