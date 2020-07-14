@@ -25,13 +25,11 @@ function App() {
       <img src={pond} className="pond2"/>
     <Router history={history}>
       <Header/>
-    <div>
       <Route exact path="/" component={Landing}/>
       <Route exact path="/options-menu" component={OptionsMenu}/>
       <Route exact path="/fish-enter" component={FishEnter}/>
       <Route exact path="/view-fish" component={ViewFish}/>
       <Route exact path="/fish-delete/:id" component={FishDelete}/>
-    </div>
     </Router>
     </div>
   );

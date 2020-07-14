@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.catfish,.catfish2,.bass,.bass2,.pond,.pond2{
+    z-index: -1;
+}
+
 .catfish{
     position: absolute;
     width: 141px;
