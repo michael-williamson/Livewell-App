@@ -5,7 +5,7 @@ class Landing extends Component {
     render() {
         return (
             <div>
-                <GoogleAuth/>
+                This is the Live well app Landing Page.
             </div>
         );
     }
