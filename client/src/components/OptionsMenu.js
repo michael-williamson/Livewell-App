@@ -8,7 +8,7 @@ class OptionsMenu extends Component {
             <div>
                 <Link to="/view-fish"  className="view-fish" >View Fish</Link>
                 <Link to="/fish-enter" className="add-fish-info">Add Fish</Link>
-                <Link to="/">Landing page</Link>
+                <Link to="/" className="return-main">Main page</Link>
             </div>
         );
     }

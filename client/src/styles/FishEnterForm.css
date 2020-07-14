@@ -1,6 +1,9 @@
 .fish-info-form{
     text-align: center;
     width: 100%; 
+    background-color: darkseagreen;
+    padding: 26px;
+    border-radius: 4px;
 }
 
 label {

@@ -8,7 +8,7 @@ class Header extends Component {
         return (
             <div>
                 <header>
-                    <h2>Livewell</h2>
+                    <h2>Livewell App</h2>
                     <div className="googleAuthHeader">
                         <GoogleAuth/>   
                     </div>
