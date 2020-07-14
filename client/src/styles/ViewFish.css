@@ -22,7 +22,8 @@
 
 .btnSpace {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #edit-btn {
@@ -41,7 +42,7 @@
 
 #remove-btn {
     margin: 5px 0 0;  
-    /* padding: 20px 41px; */
+    padding: 8px;
     border-radius: 6px;
     border: none;
     box-shadow: inset 0px 0px 10px 1px black;
@@ -50,6 +51,7 @@
     /* font-size: 1.2em;   */
     font-weight: bold;
     text-shadow: 1px 1px 3px #3ddf48;
+    font-family: sans-serif;
 }
 
 #edit-btn, #remove-btn{
@@ -72,11 +74,16 @@
 table {
     background: blue;
     text-align: center;
+    table-layout: fixed;
+}
+
+th,td{
+
 }
 
 td{
     font-family: 'Modak', cursive;
-    font-size: 40px;
+    font-size: 34px;
     height: 80px;
     line-height: 40px;
 }
@@ -88,7 +95,7 @@ tr {
   
 th {
     background: #d6ff00;
-    font-size: 29px;
+    font-size: 30px;
     height: 30px;
     color: #0058ff;
     font-family: sans-serif;
@@ -118,3 +125,15 @@ tr.Bluegill {
     font-size: 22px;
     text-align: center; 
 }   
+
+
+@media only screen and (max-width: 768px) {
+        th{
+            padding:0px;
+            font-size: 4vw;
+        }
+        td{
+            font-size: 5vw;
+
+        }
+  }

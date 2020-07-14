@@ -7,14 +7,12 @@ class Header extends Component {
     render() {
         return (
             <div>
-      <header className="">
-      <h2>Livewell</h2>
-      <div className="googleAuthHeader">
-      <GoogleAuth/>   
-      </div>
-      </header>
-             
-                
+                <header>
+                    <h2>Livewell</h2>
+                    <div className="googleAuthHeader">
+                        <GoogleAuth/>   
+                    </div>
+                </header>
             </div>
         );
     }

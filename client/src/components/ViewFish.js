@@ -19,20 +19,18 @@ class ViewFish extends Component {
 
     renderTable = () => {
         if(this.props.fish.length > 0){
-            return this.props.fish.map(item => {
+            return this.props.fish.map((item,index) => {
                 return (
-                        <Fragment>
-                        <tbody>
-                        <tr>
+                        <Fragment key={index}>
+                        <tr >
                             <td>{item.species}</td>
                             <td>{item.inches} inches</td>
                             <td>{item.pounds ? item.pounds: "0"} lbs. {item.ounces} oz.</td>
                             <td className="btnSpace">
-                                <button id="edit-btn">Edit</button>
+                                {/* <button id="edit-btn">Edit</button> */}
                                 <Link  id="remove-btn" to={`/fish-delete/${item._id}`}>Delete</Link>
                             </td>
-                        </tr>  
-                        </tbody>            
+                        </tr>           
                         </Fragment>    
                 );
             });
@@ -41,19 +39,20 @@ class ViewFish extends Component {
 
 
     render() {
-        console.log(this.props)
         return (
             <div className="viewFishDiv">
-                                    <table className="table">
-                        <thead>
-                        <tr class="header-row">
-                            <th>Species</th>
-                            <th>Length</th> 
-                            <th>Weight</th>
-                            <th></th>
+                <table className="table">
+                    <thead>
+                        <tr className="header-row">
+                        <th>Species</th>
+                        <th>Length</th> 
+                        <th>Weight</th>
+                        <th></th>
                         </tr>  
-                        </thead>
-                {this.renderTable()}
+                    </thead>
+                    <tbody>
+                        {this.renderTable()}
+                    </tbody>
                 </table>
                 <Link to="/options-menu" id="return-btn">Return</Link>
                 <Link to="/fish-enter" id="finish-btn">Add Fish</Link>               
