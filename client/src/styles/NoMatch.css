@@ -1,0 +1,23 @@
+.noMatchDiv {
+    text-align: center;
+    background-color: antiquewhite;
+    height: 400px;
+    margin: 0 20px; 
+    padding: 40px; 
+    border-radius: 3px;
+}
+
+.noMatchDiv a {
+    margin: 27px auto 0;
+    display: block;
+    padding: 20px 41px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: inset 0px 0px 10px 1px black;
+    background-color: #b9ff00;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #3ddf48;
+    position: relative;
+}
