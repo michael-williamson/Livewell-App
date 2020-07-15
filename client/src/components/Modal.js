@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import history  from '../history';
 
+import requireAuth from './requireAuth';
+
 //e.stopPropagation is preventing event bubbling
 
 const Modal = props => {

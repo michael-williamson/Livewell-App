@@ -5,6 +5,8 @@ import '../styles/ViewFish.css';
 
 import {fetchFish} from '../actions/index';
 
+import requireAuth from './requireAuth';
+
 class ViewFish extends Component {
 
     componentDidMount(){
@@ -68,4 +70,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps,{fetchFish})(ViewFish);
+export default connect(mapStateToProps,{fetchFish})(requireAuth(ViewFish));

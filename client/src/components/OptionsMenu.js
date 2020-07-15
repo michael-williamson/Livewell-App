@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/OptionsMenu.css';
 
+import requireAuth from './requireAuth';
+
 class OptionsMenu extends Component {
     render() {
         return (
@@ -14,4 +16,4 @@ class OptionsMenu extends Component {
     }
 }
 
-export default OptionsMenu;
+export default requireAuth(OptionsMenu);
