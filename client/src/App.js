@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route, Switch,Redirect} from 'react-router-dom';
+import {Router, Route, Switch} from 'react-router-dom';
 import history from './history';
 import './App.css';
 
@@ -18,12 +18,12 @@ import pond from './images/pond.jpg';
 function App() {
   return (
     <div className="App">
-      <img src={catfish} className="catfish"/>
-      <img src={bass} className="bass"/>
-      <img src={pond} className="pond"/>
-      <img src={catfish} className="catfish2"/>
-      <img src={bass} className="bass2"/>
-      <img src={pond} className="pond2"/>
+      <img src={catfish} alt="catfish" className="catfish"/>
+      <img src={bass} alt="Large Mouth bass" className="bass"/>
+      <img src={pond} alt="person in a pond" className="pond"/>
+      <img src={catfish} alt="catfish" className="catfish2"/>
+      <img src={bass} alt="Large Mouth bass" className="bass2"/>
+      <img src={pond} alt="guy in a pond" className="pond2"/>
     <Router history={history}>
       <Header/>
       <Switch>

@@ -20,6 +20,16 @@ class ViewFish extends Component {
 
 
     renderTable = () => {
+        if(this.props.fish[0]?.message){
+        return (
+            <tr className="noFishMessage">
+                <td>{this.props.fish[0]?.message}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        )
+        }
         if(this.props.fish.length > 0){
             return this.props.fish.map((item,index) => {
                 return (

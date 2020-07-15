@@ -10,6 +10,7 @@ require('./models/User')
 require('./models/Fish');
 
 // mongoose.connect(keys.mongoURI);  
+mongoose.Promise = global.Promise; 
 mongoose.connect(keys.devURI,{ useNewUrlParser: true });
 
 require('./routes/createFish')(app);
