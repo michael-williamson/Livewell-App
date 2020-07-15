@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React, { Component} from 'react';
 import {connect} from 'react-redux';
 import {Field,reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
@@ -15,8 +15,8 @@ class FishEnterForm extends Component {
       return (
         <div style={{position:'relative',display:'inline-block'}}>
           <select {...input}>
-            <option/>
-            {Array.from({length:iterations}).map((element,index)=><option>{index}</option>)}
+            <option key="hardCodedKey"/>
+            {Array.from({length:iterations}).map((element,index)=><option key={index}>{index}</option>)}
           </select>
           {touched &&
           ((error && <span style={{color:'red'}} className="selectSpan">{error}</span>)||
@@ -58,12 +58,12 @@ class FishEnterForm extends Component {
         return (
             <div>
               <form className="fish-info-form" onSubmit={this.props.handleSubmit(this.onSubmit)} >
-                <label class="species-label" for="species">Species:</label>  
+                <label className="species-label" htmlFor="species">Species:</label>  
                 <Field name="species" id="species" component={this.renderSpeciesInput} validate={[this.required]}/> 
-                <label for="length">Length:</label>
+                <label htmlFor="length">Length:</label>
                 <Field name="inches" component={this.renderSelectInput} iterations="37" validate={[this.required]}/> 
                 <span> inches</span>
-                <label for="weight">Weight:</label>
+                <label htmlFor="weight">Weight:</label>
                 <Field name="pounds" component={this.renderSelectInput} iterations="50" validate={[this.required]}/>
                 <span> lbs</span>
                 <Field name="ounces" component={this.renderSelectInput} iterations="17" validate={[this.required]}/>

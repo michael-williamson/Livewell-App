@@ -16,5 +16,6 @@ module.exports = app => {
             res.send(item.fish)
             }
         })
+        .catch(err => console.log(err));
     })
 }

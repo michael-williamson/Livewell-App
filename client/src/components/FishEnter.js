@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 
 import FishEnterForm from './FishEnterForm';
 import '../styles/FishEnter.css';

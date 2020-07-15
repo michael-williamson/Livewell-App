@@ -31,7 +31,9 @@ module.exports = app => {
                 Promise.all([
                     newUser.save(),
                     fish.save()
-                ]).then((fish) =>  res.send(console.log(fish)));
+                ]).then(() =>  res.send({}))
+                .catch(err=>
+                    console.log(err));
 
             } else {
                 user
@@ -40,9 +42,11 @@ module.exports = app => {
                 Promise.all([
                     user.save(),
                     fish.save()
-                ]).then((fish) => res.send(console.log(fish)));
+                ]).then(() => res.send({message:"Creation Successful"}))
+                .catch(err => console.log(err))
             }
-        });
+        })
+        .catch(err => console.log(err));
 
     })
 }

@@ -6,14 +6,12 @@ module.exports = app => {
     app.post('/api/deleteFish', (req,res)=>{
 
        const {googleId,id} = req.body 
-       console.log("working", googleId, id)
 
         User.find({googleId}).then(user => {
             let result = user[0].fish.filter(fish => fish != id && fish != null);
             let arr = [];
 
             user[0].fish = [];
-
 
             result.forEach(element=> {
               if(mongoose.Types.ObjectId.isValid(element)){
@@ -22,16 +20,13 @@ module.exports = app => {
             })
 
             user[0].fish = arr; 
-            user[0].save(); 
+            user[0].save()
+            .then();
 
-        })
-
-
-
+        }).catch(err => console.log(err))
 
         Fish.findByIdAndDelete(id)
-        .then(fish => res.send(fish))
-
-
+        .then(()=>res.status(202).send({message:"Deletion Successful"}))
+        .catch(err => console.log(err));
     });
 }  
