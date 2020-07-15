@@ -9,6 +9,7 @@ import Landing from './components/Landing';
 import OptionsMenu from './components/OptionsMenu';
 import ViewFish from './components/ViewFish';
 import FishDelete from './components/FishDelete';
+import NoMatch from './components/NoMatch';
 
 import catfish from './images/catfish.jpg';
 import bass from './images/bass.jpg';
@@ -25,11 +26,14 @@ function App() {
       <img src={pond} className="pond2"/>
     <Router history={history}>
       <Header/>
-      <Route exact path="/" component={Landing}/>
-      <Route exact path="/options-menu" component={OptionsMenu}/>
-      <Route exact path="/fish-enter" component={FishEnter}/>
-      <Route exact path="/view-fish" component={ViewFish}/>
-      <Route exact path="/fish-delete/:id" component={FishDelete}/>
+      <Switch>
+        <Route exact path="/" component={Landing}/>
+        <Route exact path="/options-menu" component={OptionsMenu}/>
+        <Route exact path="/fish-enter" component={FishEnter}/>
+        <Route exact path="/view-fish" component={ViewFish}/>
+        <Route exact path="/fish-delete/:id" component={FishDelete}/>
+        <Route component={NoMatch}/>
+      </Switch>
     </Router>
     </div>
   );
