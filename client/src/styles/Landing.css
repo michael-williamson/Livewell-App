@@ -4,7 +4,7 @@
     text-align: center;
     background-color: navajowhite;
     height: 80%;
-    padding: 32px 0 0;
+    padding: 32px 0 32px;
     border-radius: 3px;
 }
 
@@ -17,4 +17,13 @@
     background-color: antiquewhite;
     font-size: 40px;
     margin: 0 18px;
+}
+
+@media only screen and (max-width: 768px) {
+.landingPage{
+    padding:32px 0 32px;
+}
+ .landingPage p {
+     font-size: 31px;
+ }
 }

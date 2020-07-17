@@ -9,9 +9,10 @@ app.use(bodyParser.json());
 require('./models/User')
 require('./models/Fish');
 
-// mongoose.connect(keys.mongoURI);  
+
 mongoose.Promise = global.Promise; 
-mongoose.connect(keys.devURI,{ useNewUrlParser: true });
+// mongoose.connect(keys.devURI,{ useNewUrlParser: true });
+mongoose.connect(keys.mongoURI);  
 
 require('./routes/createFish')(app);
 require('./routes/fetchFish')(app);

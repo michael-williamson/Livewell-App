@@ -14,8 +14,8 @@ class FishEnterForm extends Component {
     renderSelectInput = ({input,iterations,meta:{touched,error,warning}}) => {
       return (
         <div style={{position:'relative',display:'inline-block'}}>
-          <select {...input}>
-            <option key="hardCodedKey"/>
+          <select {...input} className="measurementsSelect">
+            <option key="hardCodedKey" className="firstChildOption"/>
             {Array.from({length:iterations}).map((element,index)=><option key={index}>{index}</option>)}
           </select>
           {touched &&
@@ -29,8 +29,8 @@ class FishEnterForm extends Component {
     renderSpeciesInput = ({input,meta:{touched,warning,error}}) => {
       return (
         <div style={{position:'relative',display:'inline-block'}}>
-          <select id="species" {...input}>
-            <option/>
+          <select id="species" className="speciesSelect" {...input}>
+            <option className="firstChildOption"/>
             <option>Largemouth Bass</option>
             <option>Bluegill</option>
             <option>White Perch</option>
@@ -62,11 +62,14 @@ class FishEnterForm extends Component {
                 <Field name="species" id="species" component={this.renderSpeciesInput} validate={[this.required]}/> 
                 <label htmlFor="length">Length:</label>
                 <Field name="inches" component={this.renderSelectInput} iterations="37" validate={[this.required]}/> 
+                {" "}
                 <span> inches</span>
                 <label htmlFor="weight">Weight:</label>
                 <Field name="pounds" component={this.renderSelectInput} iterations="50" validate={[this.required]}/>
+                {" "}
                 <span> lbs</span>
                 <Field name="ounces" component={this.renderSelectInput} iterations="17" validate={[this.required]}/>
+                {" "}
                 <span> ounces</span>
                 <div style={{position:'relative'}}>
                 <button id="submit-fish" type="submit" disabled={this.submitValidation()} onClick={this.disableMessage}>Add Fish</button>

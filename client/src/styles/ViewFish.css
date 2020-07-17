@@ -6,7 +6,7 @@
 }
 
 #return-btn {
-    margin: 27px auto 0;
+    margin: 0 auto 15px;
     display: block;
     padding: 20px 41px;
     width: 132px;
@@ -59,7 +59,7 @@
 }
 
 #finish-btn {
-    margin: 27px auto 0;  
+    margin: 0 auto;  
     padding: 20px 41px;
     border-radius: 6px;
     border: none;
@@ -75,6 +75,7 @@ table {
     background: blue;
     text-align: center;
     table-layout: fixed;
+    margin-bottom: 28px;
 }
 
 th,td{

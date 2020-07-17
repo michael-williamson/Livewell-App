@@ -19,27 +19,48 @@ label {
     display: block;
     text-align: center;
 }
-select{
+.speciesSelect{
     height: 44px;
     font-size: 1.5em;
     border: none;
     border-radius: 2px;
     margin-left: 1px;
     margin-bottom: 13px; 
+    scroll-behavior: smooth;
   }
+
+  .measurementsSelect {
+    height: 48px;
+    font-size: 2.5em;
+    border: none;
+    border-radius: 12px;
+    margin-left: 1px;
+    margin-bottom: 13px;
+    scroll-behavior: smooth;
+    width: 91px;
+  }
+
+
+  /* body ::-webkit-scrollbar-thumb {
+    display: none;
+}
+  body ::-webkit-scrollbar-track {
+    display: none;
+} */
 
   .selectSpan {
     color: red;
     position: absolute;
     bottom: -8px;
     left: 0;
+    background-color: transparent; 
   }
 
 span {
     color: #71ff00;
     font-size: 1.1em;
     font-family: sans-serif;
-    background-color: rgba(90, 0, 255, 0.24);
+    background-color: rgba(90, 0, 255, 0.48);
     width: 62px;
     display: inline-block;
     padding-left: 3px;

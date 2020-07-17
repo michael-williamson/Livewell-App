@@ -6,7 +6,7 @@ import '../styles/Header.css';
 class Header extends Component {
     render() {
         return (
-            <div>
+            <div className="headerDiv">
                 <header>
                     <h2>Livewell App</h2>
                     <div className="googleAuthHeader">
