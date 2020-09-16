@@ -4,7 +4,7 @@ import {Field,reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
 
 import '../styles/FishEnterForm.css';
-
+ 
 import {createFish} from '../actions/index';
 
 class FishEnterForm extends Component {
