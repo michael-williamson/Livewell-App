@@ -11,7 +11,7 @@ module.exports = app => {
             let result = user[0].fish.filter(fish => fish != id && fish != null);
             let arr = [];
 
-            user[0].fish = [];
+            user[0].fish = []; 
 
             result.forEach(element=> {
               if(mongoose.Types.ObjectId.isValid(element)){
